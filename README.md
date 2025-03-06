@@ -62,13 +62,6 @@ cd ~/HyDE/Scripts
 ./install.sh
 ```
 
-> [!TIP]
-> You can also add any other apps you wish to install alongside HyDE to `Scripts/custom_apps.lst` and pass the file as a parameter to install it like so:
->
-> ```shell
-> ./install.sh custom_apps.lst
-> ```
-
 As a second install option, you can also use `Hyde-install`, which might be easier for some.
 View installation instructions for HyDE in [Hyde-cli - Usage](https://github.com/kRHYME7/Hyde-cli?tab=readme-ov-file#usage).
 
