@@ -137,7 +137,7 @@ EOF
     #--------------------------------#
     if nvidia_detect; then
         case "${PKG_MANAGER}" in
-        apt) echo "skip" ;;
+        apt) sudo apt install nvidia-drivers ;;
         dnf) echo "skip" ;;
         pacman)
             echo "skip"
