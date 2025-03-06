@@ -1,0 +1,91 @@
+# System Tools & Utilities
+build-essential
+cmake
+cmake-extras
+curl
+jq
+pkg-config
+parallel
+pipx
+psmisc
+scdoc
+xz-utils
+
+# Window Management & Desktop Environment
+ark
+dolphin
+dolphin-plugins
+kitty
+rofi
+swayidle
+wlogout
+waybar
+wayland-protocols
+xwayland
+
+# Audio & Multimedia
+pipewire
+pipewire-alsa
+pipewire-audio
+pipewire-jack
+pipewire-pulse
+pavucontrol
+pamixer
+ffmpegthumbs
+imagemagick
+swappy
+
+# Programming & Development
+git
+golang
+gawk
+gettext
+meson
+python3-mako
+python3-markdown
+python3-markupsafe
+python3-yaml
+qt5ct
+qt5-style-kvantum
+qt6-base-dev
+qt6-image-formats-plugins
+qt6-wayland
+qt6ct
+
+# Visuals & Appearance
+blueman
+bluez
+brightnessctl
+cliphist
+dunst
+eza
+fastfetch
+nwg-look
+neofetch
+lsd
+
+# System & Hardware Management
+hyprland
+network-manager
+network-manager-gnome
+hwdata
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-wlr
+libnotify-bin
+libstartup-notification0
+# Security & Authentication
+polkit-kde-agent-1
+seatd
+libpam0g-dev
+libtiffxx6
+
+# Other Useful Tools
+vim
+zsh
+slurp
+grim
+wireplumber
+xdg-desktop-portal
+
