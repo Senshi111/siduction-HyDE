@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 scrDir=$(dirname "$(realpath "$0")")
 source $scrDir/globalcontrol.sh

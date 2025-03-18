@@ -33,7 +33,7 @@ P|${HOME}/.config/hyde|config.toml|hyprland
 P|${HOME}/.config/hypr|hyde.conf animations.conf windowrules.conf keybindings.conf userprefs.conf monitors.conf|hyprland
 P|${HOME}/.config/hypr|nvidia.conf|hyprland nvidia-driver
 P|${HOME}/.config/hypr/themes|theme.conf wallbash.conf colors.conf|hyprland
-P|${HOME}/.local/state|hyde|hyprland
+P|${HOME}/.local/state/hyde|hyprland.conf|hyprland
 
 S|${HOME}/.config/hypr|hyprland.conf|hyprland
 S|${HOME}/.local|bin|hyprland
@@ -53,7 +53,7 @@ O|${HOME}/.local/lib|hyde|hyprland
  Editor 
 P|${HOME}/.config/Code - OSS/User|settings.json|code
 P|${HOME}/.config/Code/User|settings.json|code
-P|${HOME}/.config/VSCodium/User|settings.json|vscodium-bin
+P|${HOME}/.config/VSCodium/User|settings.json|vscodium
 
  Bar 
 P|${HOME}/.config/waybar|config.ctl|waybar
@@ -61,7 +61,9 @@ S|${HOME}/.config/waybar|modules config.jsonc theme.css style.css|waybar
 
  Terminal 
 P|${HOME}/.config|lsd|lsd
-S|${HOME}/.config|fastfetch|fastfetch
+P|${HOME}/.config|fastfetch|fastfetch
+O|${HOME}/.local/share/fastfetch/presets|hyde|fastfetch
+
 S|${HOME}/.config/kitty|hyde.conf theme.conf|kitty
 P|${HOME}/.config/kitty|kitty.conf|kitty
 
@@ -86,8 +88,7 @@ P|${HOME}/.config|libinput-gestures.conf|libinput-gestures
  Wayland 
 P|${HOME}/.config|spotify-flags.conf|spotify
 P|${HOME}/.config|code-flags.conf|code
-P|${HOME}/.config|code-flags.conf|visual-studio-code-bin
-P|${HOME}/.config|vscodium-flags.conf|vscodium-bin
+P|${HOME}/.config|vscodium-flags.conf|vscodium
 P|${HOME}/.config|electron-flags.conf|electron
 
  Notifications 

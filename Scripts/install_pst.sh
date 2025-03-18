@@ -14,7 +14,7 @@ fi
 cloneDir="${cloneDir:-$CLONE_DIR}"
 # Detect Package Manager
 detect_package_manager()
-pkg_installed()
+#pkg_installed()
 # SDDM Configuration
 
 # sddm
@@ -59,11 +59,11 @@ if pkg_installed dolphin && pkg_installed xdg-utils; then
 
 else
     print_log -y "[FILEMANAGER] " -b " :: " "dolphin is not installed..."
-    printt_log -y "[FILEMANAGER] " -b " :: " "Setting $(xdg-mime query default "inode/directory") as default file explorer..."
+    print_log -y "[FILEMANAGER] " -b " :: " "Setting $(xdg-mime query default "inode/directory") as default file explorer..."
 fi
 
 # shell
-#"${scrDir}/restore_shl.sh"
+"${scrDir}/restore_shl.sh"
 
 # flatpak
 if ! pkg_installed flatpak; then

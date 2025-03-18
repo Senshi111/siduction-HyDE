@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Function to set permissions for Spotify path
 set_permissions() {

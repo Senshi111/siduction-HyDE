@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # shellcheck source=/home/khing/.local/bin/hyde-shell
 # shellcheck disable=SC1091

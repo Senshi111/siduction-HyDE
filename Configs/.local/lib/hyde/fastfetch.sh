@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Early load to maintain fastfetch speed
 if [ -z "${*}" ]; then

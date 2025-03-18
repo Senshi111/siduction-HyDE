@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # A simple script to display a battery icon
 
 # Function to display usage information
