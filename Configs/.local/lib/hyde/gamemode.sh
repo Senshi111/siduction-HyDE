@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # TODO: Add persistent mode
 HYPRGAMEMODE=$(hyprctl getoption animations:enabled | sed -n '1p' | awk '{print $2}')
 

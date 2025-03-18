@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # This script will soon be use to resolve $PATHS and LIB_DIR specific to hyde
 # wallbash script can source this script to resolve the paths cleanly on a separate shell
 
@@ -10,7 +10,7 @@ export BIN_DIR LIB_DIR SHARE_DIR
 
 # shellcheck disable=SC1091
 if ! source "${LIB_DIR}/hyde/globalcontrol.sh"; then
-    echo "Error: Could not load HyDe, broken installation?"
+    echo "Error: Could not load HyDE, broken installation?"
     exit 1
 fi
 

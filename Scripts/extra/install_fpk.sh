@@ -29,5 +29,8 @@ gtkIcon=$(gsettings get org.gnome.desktop.interface icon-theme | sed "s/'//g")
 flatpak --user override --filesystem=~/.themes
 flatpak --user override --filesystem=~/.icons
 
+flatpak --user override --filesystem=~/.local/share/themes
+flatpak --user override --filesystem=~/.local/share/icons
+
 flatpak --user override --env=GTK_THEME=${gtkTheme}
 flatpak --user override --env=ICON_THEME=${gtkIcon}

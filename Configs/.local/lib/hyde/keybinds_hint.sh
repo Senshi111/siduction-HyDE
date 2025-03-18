@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 pkill -x rofi && exit
 scrDir=$(dirname "$(realpath "$0")")

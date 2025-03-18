@@ -71,6 +71,7 @@ done
 
 [ -d "$HOME/.config/hyde" ] && rm -rf "$HOME/.config/hyde"
 [ -d "$HOME/.cache/hyde" ] && rm -rf "$HOME/.cache/hyde"
+[ -d "$HOME/.local/state/hyde" ] && rm -rf "$HOME/.local/state/hyde"
 
 cat <<"NOTE"
 -------------------------------------------------------
@@ -96,5 +97,5 @@ Revert back bootloader/pacman/sddm settings manually from these backups
 
 Uninstall the packages manually that are no longer required based on these list
 ${scrDir}/pkg_core.lst
-${scrDir}/pkg_custom.lst
+${scrDir}/pkg_extra.lst
 NOTE

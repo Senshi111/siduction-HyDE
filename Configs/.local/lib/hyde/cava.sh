@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #----- Optimized bars animation without much CPU usage increase --------
 #----- Optimized bars animation without much CPU usage increase pt2 --------
 

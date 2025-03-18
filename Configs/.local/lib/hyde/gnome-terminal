@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # This is a wrapper script to be use by gtk-launch and other gtk stuff
 # that is expecting users to ALWAYS use the "gnome-terminal" command.
 # -- The HyDE Project --

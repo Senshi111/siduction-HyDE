@@ -129,12 +129,12 @@ function no_such_file_or_directory_handler {
     return 127
 }
 
-# export env vars here
 
 # cleaning up home folder
 XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
-XDG_CONFIG_DIR="${XDG_CONFIG_DIR:-HOME/.config}"
+XDG_CONFIG_DIR="${XDG_CONFIG_DIR:-$HOME/.config}"
 XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
+XDG_DATA_DIRS="${XDG_DATA_DIRS:-$XDG_DATA_HOME:/usr/local/share:/usr/share}"
 XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
 XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 XDG_DESKTOP_DIR="${XDG_DESKTOP_DIR:-$HOME/Desktop}"
@@ -146,7 +146,16 @@ XDG_MUSIC_DIR="${XDG_MUSIC_DIR:-$HOME/Music}"
 XDG_PICTURES_DIR="${XDG_PICTURES_DIR:-$HOME/Pictures}"
 XDG_VIDEOS_DIR="${XDG_VIDEOS_DIR:-$HOME/Videos}"
 LESSHISTFILE=${LESSHISTFILE:-/tmp/less-hist}
-PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel
+PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
+
+# wget
+WGETRC="${XDG_CONFIG_HOME}/wgetrc"
+SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
+
+export XDG_CONFIG_HOME XDG_CONFIG_DIR XDG_DATA_HOME XDG_STATE_HOME XDG_CACHE_HOME XDG_DESKTOP_DIR XDG_DOWNLOAD_DIR \
+XDG_TEMPLATES_DIR XDG_PUBLICSHARE_DIR XDG_DOCUMENTS_DIR XDG_MUSIC_DIR XDG_PICTURES_DIR XDG_VIDEOS_DIR WGETRC SCREENRC 
+
+
 
 if [ -t 1 ];then
     # We are loading the prompt on start so users can see the prompt immediately
@@ -174,14 +183,8 @@ if [ -t 1 ];then
     # Optionally load user configuration // usefull for customizing the shell without modifying the main file
     [[ -f ~/.hyde.zshrc ]] && source ~/.hyde.zshrc
 
-
-    # wget
-    WGETRC="${XDG_CONFIG_HOME}/wgetrc"
-    SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
-
-    export XDG_CONFIG_HOME XDG_CONFIG_DIR XDG_DATA_HOME XDG_STATE_HOME XDG_CACHE_HOME XDG_DESKTOP_DIR XDG_DOWNLOAD_DIR \
-    XDG_TEMPLATES_DIR XDG_PUBLICSHARE_DIR XDG_DOCUMENTS_DIR XDG_MUSIC_DIR XDG_PICTURES_DIR XDG_VIDEOS_DIR
-
+    # Load plugins
+    load_zsh_plugins
 
     # Helpful aliases
     if [[ -x "$(which eza)" ]]; then
@@ -208,9 +211,6 @@ if [ -t 1 ];then
         .5='cd ../../../../..' \
         mkdir='mkdir -p' # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 
-
-    # Load plugins
-    load_zsh_plugins
 
     # Warn if the shell is slow to load
     autoload -Uz add-zsh-hook

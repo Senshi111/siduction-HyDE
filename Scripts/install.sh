@@ -130,6 +130,7 @@ EOF
     # Select the correct package list based on the package manager
     if [[ "$PKG_MANAGER" == "apt" ]]; then
         sudo "${scrDir}/install_apps.sh"
+       #echo "skip"
     fi
 
     #--------------------------------#
@@ -167,7 +168,7 @@ EOF
     "${scrDir}/install_hyper.sh"
     "${scrDir}/rofi-wayland.sh"
     pipx install hyprshade
-    pipx ensurepath
+#     pipx ensurepath
 #        hyper install hyper-sunset
 fi
 
@@ -192,7 +193,7 @@ EOF
     "${scrDir}/restore_fnt.sh"
     "${scrDir}/restore_cfg.sh"
     "${scrDir}/restore_thm.sh"
-
+    print_log -g "[generate] " "cache ::" "Wallpapers..."
     if [ "${flg_DryRun}" -ne 1 ]; then
         "$HOME/.local/lib/hyde/swwwallcache.sh" -t ""
         "$HOME/.local/lib/hyde/themeswitch.sh" -q || true

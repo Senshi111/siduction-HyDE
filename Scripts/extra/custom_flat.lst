@@ -8,7 +8,7 @@ io.gitlab.adhami3310.Impression                # Impression
 # io.github.dimtpap.coppwr                     # Coppwr
 
 # ------------------------------------------- // Browser
-com.brave.Browser                              # Brave
+# com.brave.Browser                              # Brave
 # org.torproject.torbrowser-launcher           # Tor
 
 # ------------------------------------------- // Social

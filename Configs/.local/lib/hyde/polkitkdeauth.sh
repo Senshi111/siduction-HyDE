@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Use different directory on NixOS
 if [ -d /run/current-system/sw/libexec ]; then
