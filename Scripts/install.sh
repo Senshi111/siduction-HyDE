@@ -167,6 +167,7 @@ EOF
     "${scrDir}/install_xdg_hyprland.sh"
     "${scrDir}/install_hyper.sh"
     "${scrDir}/rofi-wayland.sh"
+    "${scrDir}/install_uwsm.sh"
     pipx install hyprshade
 #     pipx ensurepath
 #        hyper install hyper-sunset
