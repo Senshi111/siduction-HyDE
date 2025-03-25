@@ -129,7 +129,7 @@ EOF
 
     # Select the correct package list based on the package manager
     if [[ "$PKG_MANAGER" == "apt" ]]; then
-        sudo "${scrDir}/install_apps.sh"
+       sudo "${scrDir}/install_apps.sh"
        #echo "skip"
     fi
 
@@ -138,7 +138,7 @@ EOF
     #--------------------------------#
     if nvidia_detect; then
         case "${PKG_MANAGER}" in
-        apt) sudo apt install nvidia-drivers ;;
+        apt) echo "skip";;
         dnf) echo "skip" ;;
         pacman)
             echo "skip"
@@ -147,7 +147,7 @@ EOF
         nvidia_detect --verbose
     fi
 
-    # Install packages
+    Install packages
     "${scrDir}/swww.sh"
     "${scrDir}/install_pokemon-colorscripts.sh"
     "${scrDir}/install_kvantum_qt6.sh"
@@ -159,7 +159,7 @@ EOF
     "${scrDir}/grimblast.sh"
     "${scrDir}/install_hyprland_protocols.sh"
     "${scrDir}/install_hyprland-qt-support.sh"
-    "${scrDir}/install_hyprland-qtutils.sh "
+    "${scrDir}/install_hyprland-qt-utils.sh"
     "${scrDir}/install_satty.sh"
     "${scrDir}/install_hyprlock.sh"
     "${scrDir}/install_hypridle.sh"

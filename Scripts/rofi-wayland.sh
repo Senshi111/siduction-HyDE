@@ -29,7 +29,7 @@ sudo apt install -y \
   libstartup-notification0-dev \
   libglib2.0-dev \
   libpango1.0-dev \
-  libgdk-pixbuf2.0-dev \
+  libgdk-pixbuf-xlib-2.0-dev \
   libpixman-1-dev \
   libx11-dev
 

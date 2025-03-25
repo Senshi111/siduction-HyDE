@@ -3,19 +3,14 @@
 # Exit on error
 set -e
 
-# Check if running as root
-if [ "$(id -u)" -ne 0 ]; then
-    echo "This script must be run as root!" 1>&2
-    exit 1
-fi
 
 # Update system package list
 echo "Updating system packages..."
-apt update
+sudo apt update
 
 # Install dependencies
 echo "Installing required dependencies..."
-apt install -y \
+sudo apt install -y \
     build-essential \
     git \
     meson \
@@ -41,7 +36,7 @@ ninja -C builddir
 
 # Install the project
 echo "Installing Hyprland Protocols..."
-ninja -C builddir install
+sudo ninja -C builddir install
 
 # Clean up
 cd ..

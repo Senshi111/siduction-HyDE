@@ -109,6 +109,7 @@ HELP
         pkill -o -f "cava -p ${config_file}" # kill the oldest instance
 
     fi
+
     # // cava_stbmode - standby mode for stdout cava - default 0
     # 0: clean - totally hides the module
     # 1: blank - makes module expand as spaces
