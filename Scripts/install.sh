@@ -129,7 +129,7 @@ EOF
 
     # Select the correct package list based on the package manager
     if [[ "$PKG_MANAGER" == "apt" ]]; then
-       sudo "${scrDir}/install_apps.sh"
+      sudo "${scrDir}/install_apps.sh"
        #echo "skip"
     fi
 
@@ -147,7 +147,7 @@ EOF
         nvidia_detect --verbose
     fi
 
-    Install packages
+  echo "Install packages"
     "${scrDir}/swww.sh"
     "${scrDir}/install_pokemon-colorscripts.sh"
     "${scrDir}/install_kvantum_qt6.sh"
