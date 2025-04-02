@@ -222,10 +222,12 @@ main() {
             Wall_Cache "${wallList[setIndex]}"
             ;;
         s)
-            if [ -n "${wallpaper_path}" ] && [ -f "${wallpaper_path}" ]; then
-                get_hashmap "${wallpaper_path}"
+            if [ -z "${wallpaper_path}" ] && [ ! -f "${wallpaper_path}" ]; then
+                print_log -err "wallpaper" "Wallpaper not found: ${wallpaper_path}"
+                exit 1
             fi
-            Wall_Cache "${wallList[setIndex]}"
+            get_hashmap "${wallpaper_path}"
+            Wall_Cache
             ;;
         g)
             if [ ! -e "${wallSet}" ]; then
@@ -316,7 +318,7 @@ while true; do
         exit 0
         ;;
     -S | --select)
-        "${scrDir}/swwwallcache.sh" w &
+        "${scrDir}/swwwallcache.sh" w &>/dev/null &
         wallpaper_setter_flag=select
         shift
         ;;

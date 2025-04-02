@@ -121,6 +121,10 @@ toml_write "${confDir}/kdeglobals" "UiSettings" "ColorScheme" "colors"
 toml_write "${confDir}/kdeglobals" "KDE" "widgetStyle" "kvantum"
 # toml_write "${confDir}/kdeglobals" "Colors:View" "BackgroundNormal" "#00000000" #! This is set on wallbash
 
+# // gtk
+
+toml_write "${XDG_DATA_HOME}/icons/default/index.theme" "Icon Theme" "Inherits" "${cursorTheme}"
+
 # // gtk2
 
 sed -i -e "/^gtk-theme-name=/c\gtk-theme-name=\"${gtkTheme}\"" \
