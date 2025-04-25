@@ -37,11 +37,7 @@ Multi-language README support
 
 <div align="center">
   <div style="display: flex; flex-wrap: nowrap; justify-content: center;">
-    <img src="Source/assets/archlinux.png" alt="Arch Linux" style="width: 10%; margin: 10px;"/>
-    <img src="Source/assets/cachyos.png" alt="CachyOS" style="width: 10%; margin: 10px;"/>
-    <img src="Source/assets/endeavouros.png" alt="EndeavourOS" style="width: 10%; margin: 10px;"/>
-    <img src="Source/assets/garuda.png" alt="Garuda" style="width: 10%; margin: 10px;"/>
-    <img src="Source/assets/nixos.png" alt="NixOS" style="width: 10%; margin: 10px;"/>
+    <img src="https://siduction.org/wp-content/uploads/2021/06/transparent.gif" alt="Arch Linux" style="width: 10%; margin: 10px;"/>
   </div>
 </div>
 
@@ -79,7 +75,7 @@ To install, execute the following commands:
 
 ```shell
 pacman -S --needed git base-devel
-git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE
+git clone --depth 1 https://github.com/Senshi111/siduction-HyDE.git ~/HyDE
 cd ~/HyDE/Scripts
 ./install.sh
 ```
