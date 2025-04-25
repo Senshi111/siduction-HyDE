@@ -37,7 +37,7 @@ Multi-language README support
 
 <div align="center">
   <div style="display: flex; flex-wrap: nowrap; justify-content: center;">
-    <img src="https://siduction.org/wp-content/uploads/2021/06/transparent.gif" alt="Arch Linux" style="width: 10%; margin: 10px;"/>
+    <img src="https://siduction.org/wp-content/uploads/2021/06/transparent.gif" alt="Siduction Linux" style="width: 10%; margin: 10px;"/>
   </div>
 </div>
 
@@ -74,7 +74,7 @@ For NixOS support there is a separate project being maintained @ [Hydenix](https
 To install, execute the following commands:
 
 ```shell
-pacman -S --needed git base-devel
+sudo apt install -y git base-devel
 git clone --depth 1 https://github.com/Senshi111/siduction-HyDE.git ~/HyDE
 cd ~/HyDE/Scripts
 ./install.sh
