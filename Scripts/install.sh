@@ -123,14 +123,17 @@ if [ ${flg_Install} -eq 1 ]; then
 
 EOF
 
-    # Prepare package list
+    #----------------------#
+    # prepare package list #
+    #----------------------#
     shift $((OPTIND - 1))
     cust_pkg=$1
 
     # Select the correct package list based on the package manager
     if [[ "$PKG_MANAGER" == "apt" ]]; then
       sudo "${scrDir}/install_apps.sh"
-       #echo "skip"
+      sudo "${scrDir}/install_debian_packages.sh"
+#        echo "skip"
     fi
 
     #--------------------------------#
@@ -165,7 +168,7 @@ EOF
     "${scrDir}/install_hypridle.sh"
     "${scrDir}/install_hyprland.sh"
     "${scrDir}/install_xdg_hyprland.sh"
-    "${scrDir}/install_hyper.sh"
+   "${scrDir}/install_hyper.sh"
     "${scrDir}/rofi-wayland.sh"
     "${scrDir}/install_uwsm.sh"
     pipx install hyprshade
@@ -197,7 +200,7 @@ EOF
     print_log -g "[generate] " "cache ::" "Wallpapers..."
     if [ "${flg_DryRun}" -ne 1 ]; then
         "$HOME/.local/lib/hyde/swwwallcache.sh" -t ""
-        "$HOME/.local/lib/hyde/themeswitch.sh" -q || true
+        "$HOME/.local/lib/hyde/theme.switch.sh" -q || true
         echo "[install] reload :: Hyprland"
     fi
 

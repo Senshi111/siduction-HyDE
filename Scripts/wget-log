@@ -1,0 +1,11 @@
+--2025-04-25 17:52:08--  https://dl.google.com/linux/linux_signing_key.pub
+Resolving dl.google.com (dl.google.com)... 142.251.39.46, 2a00:1450:400d:80d::200e
+Connecting to dl.google.com (dl.google.com)|142.251.39.46|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 19127 (19K) [application/vnd.exstream-package]
+Saving to: ‘STDOUT’
+
+-                           0%[                                      ]       0  --.-KB/s               -                         100%[=====================================>]  18.68K  --.-KB/s    in 0.01s   
+
+2025-04-25 17:52:08 (1.68 MB/s) - written to stdout [19127/19127]
+

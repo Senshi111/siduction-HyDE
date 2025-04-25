@@ -6,7 +6,7 @@ We will be using ./restore_cfg.psv to restore the dotfiles
 
 This is a pipe separated value file.
 It contains the paths of the dotfiles and
-their respective package dependency.
+their respective package dependencies.
 
 Structure:
 #?                                       flag|path|file|dependency
@@ -15,14 +15,14 @@ Note:
 - Lines starting with '#' are comments
 - The only known variable is '${HOME}'
 - This is a 4 column file separated by '|'
-- Each column should use spaces to separate array
+- Each column should use spaces to separate arrays
 
 ! This is intended for legacy support only.
 ! Use this if you just want to restore the dotfiles
 ! updating the dotfiles means overwriting the existing files
 ! I also don't understand the flags very well
 
-This is a punnet square of the flags, But the output are unexpected
+This is a punnet square of the flags, But the outputs are unexpected
 |-------------------|-----------------------|-------------|
 | backup/overwrite  |  Y                    |  N          |
 |-------------------|-----------------------|-------------|
@@ -43,7 +43,7 @@ N|Y|${HOME}/.config|fish|fish
 N|Y|${HOME}/.config|lsd|lsd
 Y|Y|${HOME}/.config/hyde|wallbash|hyprland
 Y|Y|${HOME}/.local/share|hyde|hyprland
-N|Y|${HOME}/.config/hypr|nvidia.conf|hyprland nvidia-driver
+N|Y|${HOME}/.config/hypr|nvidia.conf|hyprland nvidia-smi
 N|Y|${HOME}/.config/hypr|hyde.conf keybindings.conf monitors.conf userprefs.conf animations.conf hyprland.conf windowrules.conf animations themes|hyprland
 Y|Y|${HOME}/.local/lib|hyde|hyprland
 Y|Y|${HOME}/.config|kitty|kitty

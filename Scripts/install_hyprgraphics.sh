@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install libpng-dev
+sudo apt install libpng-dev libspng-dev
 
 
 

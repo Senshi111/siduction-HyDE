@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install libpam0g-dev libgbm-dev libdrm-dev libmagic-dev libhyprlang-dev libhyprutils-dev
+sudo apt install -y libpam0g-dev libgbm-dev libdrm-dev libmagic-dev libhyprlang-dev libhyprutils-dev libsdbus-c++-dev
 
 
 # Clone the hyprlock repository

@@ -1,14 +1,7 @@
 #!/bin/bash
-
-# Ensure the script is run as root or with sudo
-if [[ $EUID -ne 0 ]]; then
-   echo "Please run as root or with sudo."
-   exit 1
-fi
-
 # Update package list
 echo "Updating package list..."
-apt update -y || { echo "Failed to update package list. Exiting."; exit 1; }
+sudo apt update -y || { echo "Failed to update package list. Exiting."; exit 1; }
 
 # List of packages to install
 packages=(
@@ -35,7 +28,7 @@ packages=(
     golang
     grim
     gobject-introspection
-    hwdata-dev
+    hwdata
     imagemagick
     jq
     kitty
@@ -135,18 +128,14 @@ packages=(
     qt6-image-formats-plugins
     qt6-wayland
     qt6ct
-    rofi-wayland
+    rofi
     scdoc
     seatd
     slurp
     spirv-tools
     swappy
-    swaybar
-    swayidle
     udiskie
     vim
-    vlukan-utility-libraries-dev
-    vlukan-validationlayers
     waybar
     wayland-protocols
     wlogout

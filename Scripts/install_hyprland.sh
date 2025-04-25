@@ -69,8 +69,8 @@ libzip-dev \
 libxcursor-dev \
 libxcb-xfixes0-dev \
 libxcb-errors-dev \
-libre2-dev
-
+libre2-dev \
+libnotify-dev
 
 
 
