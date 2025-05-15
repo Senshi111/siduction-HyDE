@@ -123,7 +123,7 @@ packages=(
     python3-markupsafe
     python3-yaml
     qt5ct
-    qt5-style-kvantum
+    qt-style-kvantum
     qt6-base-dev
     qt6-image-formats-plugins
     qt6-wayland
