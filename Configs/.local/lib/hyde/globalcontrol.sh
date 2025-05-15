@@ -154,7 +154,7 @@ get_themes() {
         [ -f "${thmDir}/.sort" ] && thmSortS+=("$(head -1 "${thmDir}/.sort")") || thmSortS+=("0")
         thmWallS+=("${realWallPath}")
         thmListS+=("${thmDir##*/}") # Use this instead of basename
-    done < <(find "${hydeConfDir}/themes" -mindepth 1 -maxdepth 1 -type d)
+    done < <(find "${HYDE_CONFIG_HOME}/themes" -mindepth 1 -maxdepth 1 -type d)
 
     while IFS='|' read -r sort theme wall; do
         thmSort+=("${sort}")
@@ -179,14 +179,14 @@ case "${enableWallDcol}" in
 *) enableWallDcol=0 ;;
 esac
 
-if [ -z "${HYDE_THEME}" ] || [ ! -d "${hydeConfDir}/themes/${HYDE_THEME}" ]; then
+if [ -z "${HYDE_THEME}" ] || [ ! -d "${HYDE_CONFIG_HOME}/themes/${HYDE_THEME}" ]; then
     get_themes
     HYDE_THEME="${thmList[0]}"
 fi
 
-HYDE_THEME_DIR="${hydeConfDir}/themes/${HYDE_THEME}"
+HYDE_THEME_DIR="${HYDE_CONFIG_HOME}/themes/${HYDE_THEME}"
 wallbashDirs=(
-    "${hydeConfDir}/wallbash"
+    "${HYDE_CONFIG_HOME}/wallbash"
     "${XDG_DATA_HOME}/hyde/wallbash"
     "/usr/local/share/hyde/wallbash"
     "/usr/share/hyde/wallbash"
@@ -342,6 +342,22 @@ check_package() {
 get_hyprConf() {
     local hyVar="${1}"
     local file="${2:-"$HYDE_THEME_DIR/hypr.theme"}"
+
+    # First try using hyq for fast config parsing if available
+    if command -v hyq &>/dev/null; then
+        local hyq_result
+        # Try with source option for accurate results
+        hyq_result=$(hyq -s --query "\$${hyVar}" "${file}" 2>/dev/null)
+        # If empty, try without source option
+        if [ -z "${hyq_result}" ]; then
+            hyq_result=$(hyq --query "\$${hyVar}" "${file}" 2>/dev/null)
+        fi
+        # Return result if not empty
+        [ -n "${hyq_result}" ] && echo "${hyq_result}" && return 0
+
+    fi
+
+    # Fall back to traditional parsing if hyq fails or isn't available
     local gsVal
     gsVal="$(grep "^[[:space:]]*\$${hyVar}\s*=" "${file}" | cut -d '=' -f2 | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
     [ -n "${gsVal}" ] && [[ "${gsVal}" != \$* ]] && echo "${gsVal}" && return 0
